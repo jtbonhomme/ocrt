@@ -27,7 +27,8 @@ Or:
 
 # Use it
 
-
+    var ocrt = require('../lib/ocrt');
+    var result = ocrt.process("image.png", "text to be checked");
 
 # The way it works
 

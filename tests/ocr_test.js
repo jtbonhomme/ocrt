@@ -39,7 +39,7 @@ describe('ocrt.process', function() {
             });
         });
     });
-*/
+
     describe('with a full image', function() {
         this.timeout(20000);
         it('returns 0', function(done) {
@@ -49,15 +49,16 @@ describe('ocrt.process', function() {
             });
         });
     });
-/*
+*/
     describe('with an image that does not exist', function() {
-        it('returns -2', function() {
-            var result = ocrt.process(fooImage, refStrX);
-            result.should.eql(-2);
+        it('returns -1', function(done) {
+            ocrt.process(fooImage, refStrX, null, null, function(err, result){
+                result.should.eql(-1);
+                done();
+            });
         });
     });
 
-*/
 /*
     describe('with a cropped image, a reference string not included in the image and no callback', function() {
         it('returns 0', function() {

@@ -10,7 +10,7 @@
   },
   "main": "lib/ocrt.js",
   "scripts": {
-    "test": "mocha tests/*.js"
+    "test": "mocha --reporter spec tests/*.js"
   },
   "repository": {
     "type": "git",

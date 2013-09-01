@@ -15,38 +15,49 @@ var crop          = {
 };
 
 describe('ocrt.process', function() {
-	/*
+/*
     describe('with no arguments', function() {
         it('returns -1', function() {
-            var result = ocrt.process();
-            result.should.eql(-1);
-        });
-    });
-
-    describe('with a null image, a reference string not included in the image and no callback', function() {
-        it('returns -1', function() {
-            var result = ocrt.process(null, refStrX);
-            result.should.eql(-1);
-        });
-    });
-
-    describe('with an image, a reference string not included in the image and no callback', function() {
-        it('returns -1', function() {
-            var result = ocrt.process(image, null);
-            result.should.eql(-1);
-        });
-    });
-*/
-    describe('with an image not present, a reference string not included in the image and no callback', function() {
-        it('returns -1', function() {
-            ocrt.process(fooImage, refStrX, function(err, result) {
-                if(err) {
-                    console.error(err);
-                }
+            ocrt.process(null, null, null, null, function(err, result){
                 result.should.eql(-1);
             });
         });
     });
+
+    describe('with a null image', function() {
+        it('returns -1', function() {
+            ocrt.process(null, refStrX, null, null, function(err, result){
+                result.should.eql(-1);
+            });
+        });
+    });
+
+    describe('with an image, a null reference string', function() {
+        it('returns -1', function() {
+            ocrt.process(image, null, null, null, function(err, result){
+                result.should.eql(-1);
+            });
+        });
+    });
+*/
+    describe('with a full image', function() {
+        this.timeout(20000);
+        it('returns 0', function(done) {
+            ocrt.process(image, refStrX, null, null, function(err, result){
+                result.should.eql(0);
+                done();
+            });
+        });
+    });
+/*
+    describe('with an image that does not exist', function() {
+        it('returns -2', function() {
+            var result = ocrt.process(fooImage, refStrX);
+            result.should.eql(-2);
+        });
+    });
+
+*/
 /*
     describe('with a cropped image, a reference string not included in the image and no callback', function() {
         it('returns 0', function() {

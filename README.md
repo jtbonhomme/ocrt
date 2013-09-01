@@ -37,9 +37,9 @@ The likeness ratio (as a percentage) is defined as :
 
     1 - distance / Max(str1.length, str2.length)
 
-* For strings shorter than 10 characters, two string are proven to be equal if likness ratio is greater than 85%
-* For strings between 10 and 20 characters, two string are proven to be equal if likness ratio is greater than 90%
-* For strings longer than 20 characters, two string are proven to be equal if likness ratio is greater than 95%
+* For strings shorter than 10 characters, two string are proven to be equal if likness ratio is greater than 80%
+* For strings between 10 and 20 characters, two string are proven to be equal if likness ratio is greater than 85%
+* For strings longer than 20 characters, two string are proven to be equal if likness ratio is greater than 90%
 
 # References
 

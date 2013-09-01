@@ -49,7 +49,7 @@ describe('ocrt.process', function() {
             });
         });
     });
-*/
+
     describe('with an image that does not exist', function() {
         it('returns -1', function(done) {
             ocrt.process(fooImage, refStrX, null, null, function(err, result){
@@ -58,22 +58,28 @@ describe('ocrt.process', function() {
             });
         });
     });
+*/
 
-/*
+
     describe('with a cropped image, a reference string not included in the image and no callback', function() {
-        it('returns 0', function() {
-            var result = ocrt.process(croppedImage, refStrX);
-            result.should.eql(0);
+        it('returns 0', function(done) {
+            ocrt.process(croppedImage, refStrX, null, null, function(err, result){
+                result.should.eql(0);
+                done();
+            });
         });
     });
 
     describe('with a cropped image, a reference string included in the image and no callback', function() {
-        it('returns 1', function() {
-            var result = ocrt.process(croppedImage, refStr);
-            result.should.eql(1);
+        it('returns 1', function(done) {
+            ocrt.process(croppedImage, refStr, null, null, function(err, result){
+                result.should.eql(1);
+                done();
+            });
         });
     });
 
+/*
     describe('with an image to be cropped, a reference string not included in the image and no callback', function() {
         it('returns 0', function() {
             var result = ocrt.process(image, refStrX, crop);

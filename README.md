@@ -23,7 +23,18 @@ Then, install lib dependencies:
 # Use it
 
     var ocrt = require('../lib/ocrt');
-    var result = ocrt.process("image.png", "text to be checked");
+    ocrt.process("image.png", "Is this text in the picture", null, "eng", function(err, result){
+    	if( err ){
+    		console.error(err);
+    	}
+        else if( result === 1 ) {
+        	console.log("The string matches with the picture");
+        }
+        else {
+        	console.log("The string does not match with the picture");
+        }
+        return;
+    });
 
 # The way it works
 

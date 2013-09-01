@@ -15,7 +15,6 @@ var crop          = {
 };
 
 describe('ocrt.process', function() {
-/*
     describe('with no arguments', function() {
         it('returns -1', function() {
             ocrt.process(null, null, null, null, function(err, result){
@@ -58,10 +57,8 @@ describe('ocrt.process', function() {
             });
         });
     });
-*/
 
-
-    describe('with a cropped image, a reference string not included in the image and no callback', function() {
+    describe('with a cropped image and a reference string not included in the image', function() {
         it('returns 0', function(done) {
             ocrt.process(croppedImage, refStrX, null, null, function(err, result){
                 result.should.eql(0);
@@ -70,7 +67,7 @@ describe('ocrt.process', function() {
         });
     });
 
-    describe('with a cropped image, a reference string included in the image and no callback', function() {
+    describe('with a cropped image and a reference string included in the image', function() {
         it('returns 1', function(done) {
             ocrt.process(croppedImage, refStr, null, null, function(err, result){
                 result.should.eql(1);
@@ -87,12 +84,6 @@ describe('ocrt.process', function() {
         });
     });
 
-    describe('with a cropped image, a reference string included in the image and no callback', function() {
-        it('returns 1', function() {
-            var result = ocrt.process(image, refStr, crop);
-            result.should.eql(1);
-        });
-    });
 */
 
 });

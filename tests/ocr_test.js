@@ -1,4 +1,4 @@
-var ocrt = require('../lib/ocrt.js');
+var ocrt = require('../lib/ocrt');
 
 var image    = "./picture.png";
 var language = "fra";

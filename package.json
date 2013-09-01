@@ -6,6 +6,14 @@
     "levenshtein": "1.0.2",
     "node-tesseract": "*"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtbonhomme/orct/"
+  },
+  "keywords": [
+    "tesseract",
+    "ocr"
+  ],
   "author": "jtbonhomm@gmail.com",
   "license": "MIT"
 }

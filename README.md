@@ -41,6 +41,10 @@ The likeness ratio (as a percentage) is defined as :
 * For strings between 10 and 20 characters, two string are proven to be equal if likness ratio is greater than 85%
 * For strings longer than 20 characters, two string are proven to be equal if likness ratio is greater than 90%
 
+# Tests
+
+    npm test
+
 # References
 
 * https://github.com/desmondmorris/node-tesseract

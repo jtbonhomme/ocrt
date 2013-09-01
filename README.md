@@ -18,11 +18,6 @@ Or install without `--all-languages` and [install them manually as needed](http:
 
 Then, install lib dependencies:
 
-    npm install levenshtein
-    npm install node-tesseract
-
-Or:
-
     npm install
 
 # Use it

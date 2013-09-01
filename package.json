@@ -4,9 +4,9 @@
   "description": "Test library for ocr text comparison",
   "dependencies": {
     "levenshtein": "1.0.2",
-    "node-tesseract": "*",
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "tmp": "*"
   },
   "main": "lib/ocrt.js",
   "scripts": {
